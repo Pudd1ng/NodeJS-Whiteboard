@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodeJS-Whiteboard", "NodeJS-Whiteboard.njsproj", "{1CC3AB67-1A29-45E2-BF17-BE5ACC7A4ACB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CC3AB67-1A29-45E2-BF17-BE5ACC7A4ACB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CC3AB67-1A29-45E2-BF17-BE5ACC7A4ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CC3AB67-1A29-45E2-BF17-BE5ACC7A4ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CC3AB67-1A29-45E2-BF17-BE5ACC7A4ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
