@@ -19,5 +19,4 @@
 		htmlCanvas.height = window.innerHeight;
 		redraw();
 	}
-	//this function aims to resize the canvas whenever the window size is adjusted
 })();

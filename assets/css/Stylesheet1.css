@@ -17,7 +17,6 @@ body{
 }
 
 html, body {
-    /*Properties to fit canvas.js*/
 	width: 100%;
 	height: 100%;
 	margin: 0px;
