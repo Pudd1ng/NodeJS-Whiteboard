@@ -1,1 +1,2 @@
 D:\NodeJS-Whiteboard\bin\Microsoft.NodejsTools.WebRole.dll
+D:\NodeJS-Whiteboard\obj\Debug\NodeJS-Whiteboard.njsprojResolveAssemblyReference.cache

@@ -18,6 +18,7 @@
   <ItemGroup>
     <Compile Include="assets\js\canvas.js" />
     <Compile Include="assets\js\client.js" />
+    <Compile Include="assets\js\color.js" />
     <Compile Include="whiteboard.js" />
   </ItemGroup>
   <ItemGroup>

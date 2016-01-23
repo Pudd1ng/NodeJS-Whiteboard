@@ -1,50 +1,43 @@
 ﻿$(function () {
     
-    // The URL of your web server (the port is set in app.js)
-    var url = 'http://localhost:8090';
-    
+    var url = 'http://localhost:8090';   
     var doc = $(document),
         win = $(window),
-        canvas = $('#whiteboard'),
+        canvas = $('#whiteboard');
         ctx = canvas[0].getContext('2d'),
         introduction = $('#introduction');
-    
-    // Generate an unique ID
-    var id = Math.round($.now() * Math.random());
-    
-    // A flag for drawing activity
-    var drawing = false;
-    
+       
+
+    var id = Math.floor(Math.random() * 999999)
     var clients = {};
     var cursors = {};
-    
     var socket = io.connect(url);
+    var drawing = false;
     
-    socket.on('moving', function (data) {
+    socket.on('moving', function (socketdata) {
         
-        if (!(data.id in clients)) {
-            // a new user has come online. create a cursor for them
-            cursors[data.id] = $('<div class="cursor">').appendTo('#cursors');
+        if (!(socketdata.id in clients)) {
+            cursors[socketdata.id] = $('<div class="cursor">').appendTo('#cursors');
         }
-        
+
         // Move the mouse pointer
-        cursors[data.id].css({
-            'left' : data.x,
-            'top' : data.y
+        cursors[socketdata.id].css({
+            'left' : socketdata.x,
+            'top' : socketdata.y
         });
         
         // Is the user drawing?
-        if (data.drawing && clients[data.id]) {
+        if (socketdata.drawing && clients[socketdata.id]) {
             
-            // Draw a line on the canvas. clients[data.id] holds
+            // Draw a line on the canvas. clients[socketdata.id] holds
             // the previous position of this user's mouse pointer
             
-            drawLine(clients[data.id].x, clients[data.id].y, data.x, data.y);
+            drawLine(clients[socketdata.id].x, clients[socketdata.id].y, socketdata.x, socketdata.y);
         }
         
         // Saving the current client state
-        clients[data.id] = data;
-        clients[data.id].updated = $.now();
+        clients[socketdata.id] = socketdata;
+        clients[socketdata.id].updated = $.now();
     });
     
     var prev = {};
